@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": ".."
+		},
+		{
+			"name": "bd_name",
+			"path": "..\\..\\..\\n\\.sqlproj\\bd_name"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "VetClinic"
+	}
+}
