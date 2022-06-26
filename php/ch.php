@@ -73,5 +73,3 @@ echo "</legend>";
 echo "</header>";
 echo "</body>";
 echo "</html>";
-
-?>

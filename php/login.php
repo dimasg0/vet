@@ -43,10 +43,6 @@ if(($login == "admin") and ($password == "admin")) {
              echo "Помилка: " . $conn->error;
         
 }
-// echo "Помилка: перевірте правильність даних або підключення до серверу <br>";
-// echo "<a href='/html/login.html'>" .'<- повернутись'. "</a>";
-
 
 $conn->close();
 }
-?>
