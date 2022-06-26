@@ -12,7 +12,6 @@ if($conn->connect_error){
 $a = date('d.m.Y H:i:s');
 $timestamp = strtotime($a);
 
-
 $sql = "INSERT INTO `vactination`(`id_vac`, `title`, `date_start`, `date_end`, `id_animal`) VALUES
  ('$timestamp','$title', '$date_start', '$end', '$id_animal')";
 

@@ -1,94 +1,96 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-    <meta charset='utf-8'>
-    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
-    <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/css/style.css'>
-    <link rel='stylesheet' type='text/css' media='screen' href='/css/animal.css'>
-    <script src="js/jquery-3.0.0.min.js" type="text/javascript"></script>
+  <meta charset='utf-8'>
+  <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+  <title>Page Title</title>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/css/style.css'>
+  <link rel='stylesheet' type='text/css' media='screen' href='/css/animal.css'>
+  <script src="js/jquery-3.0.0.min.js" type="text/javascript"></script>
 </head>
+
 <body>
   <header>
     <div class="menu">
-        <div class="brand-name">
-            <a href="/html/index.html">
-                <h2>&nbsp Best pets </h2>
-            </a>
-        </div>
+      <div class="brand-name">
+        <a href="/html/index.html">
+          <h2>&nbsp Best pets </h2>
+        </a>
+      </div>
 
-        <nav>
-            <ul>
-              <li><a href="http://vet/html/home.html"> Головна </a></li>
-              <li><a href="http://vet/html/animal.php"> Тварини </a></li>
-              <li><a href="http://vet/html/owner.php">Власники</a></li>
-              <li><a href="http://vet/html/reception.php"> Запис </a></li>
-            </ul>
-        </nav>
+      <nav>
+        <ul>
+          <li><a href="http://vet/html/home.html"> Головна </a></li>
+          <li><a href="http://vet/html/animal.php"> Тварини </a></li>
+          <li><a href="http://vet/html/owner.php">Власники</a></li>
+          <li><a href="http://vet/html/reception.php"> Запис </a></li>
+        </ul>
+      </nav>
     </div>
   </header>
-    
-</div>
-    <section>
-        <legend>
-            <div class="container">
-              <br>
-                <h2> Власник </h2>
-                <br>
-                <form onSubmit = "return checkform(this)" action="http://vet/php/addanimal.php" method="post">  
-                  <label for="fname">IНН<em>*</em></label>
-                  <input type="text" id="firstinn" name="inn" onkeypress='validate(event)' placeholder="IНН" required>
 
-                  <script>
-                    onload=function(){
-    document.getElementById("firstinn").onchange=yesChange;
-};
-     
-function yesChange(){
-    document.getElementById("lastinn").value=document.getElementById("firstinn").value;
-};
-                  </script>
-                  <label for="fname">ФІО<em>*</em></label>
-                  <input type="text" id="fname" name="fullname" placeholder="ФІО" required>
-              
-                  <label for="lname">Номер телефона<em>*</em></label>
-                  <input type="text" id="lname" onkeypress='validate(event)' name="phone" placeholder="Номер телефона" required>
-                               
-                  <label for="ladres">Адреса<em>*</em></label>
-                  <input type="text" id="ladres" name="adress" placeholder="Адреса" required>
+  </div>
+  <section>
+    <legend>
+      <div class="container">
+        <br>
+        <h2> Власник </h2>
+        <br>
+        <form onSubmit="return checkform(this)" action="http://vet/php/addanimal.php" method="post">
+          <label for="fname">IНН<em>*</em></label>
+          <input type="text" id="firstinn" name="inn" onkeypress='validate(event)' placeholder="IНН" required>
 
-                  <label for="ladres">Пошта</label>
-                  <input type="text" id="ladres" name="email" placeholder="Пошта" required>   
+          <script>
+            onload = function () {
+              document.getElementById("firstinn").onchange = yesChange;
+            };
 
-                  <h2> Тварина </h2>
-                  <br>
-              
-                  <label for="fname">Кличка</label>
-                  <input type="text" id="a_name" name="a_name" placeholder="Кличка" required>
-              
-                  <label for="lname">Вид</label>
-                  <input type="text" id="a_breed" name="a_breed" placeholder="Вид" required>
+            function yesChange() {
+              document.getElementById("lastinn").value = document.getElementById("firstinn").value;
+            };
+          </script>
+          <label for="fname">ФІО<em>*</em></label>
+          <input type="text" id="fname" name="fullname" placeholder="ФІО" required>
 
-                  <label for="lname">Тип</label>
-                  <input type="text" id="a_type" name="a_type" placeholder="Тип" required>
+          <label for="lname">Номер телефона<em>*</em></label>
+          <input type="text" id="lname" onkeypress='validate(event)' name="phone" placeholder="Номер телефона" required>
 
-                  <label for="lname">Стать</label>
-                  <select id="country" name="gender">
-                    <option value="M">M</option>
-                    <option value="F">F</option>
-                  </select>
+          <label for="ladres">Адреса<em>*</em></label>
+          <input type="text" id="ladres" name="adress" placeholder="Адреса" required>
 
-                  <label for="lname">Вага</label>
-                  <input type="text" id="weight" onkeypress='validate(event)' name="weight" placeholder="Вага" required>
+          <label for="ladres">Пошта</label>
+          <input type="text" id="ladres" name="email" placeholder="Пошта" required>
 
-                  <label for="lname">Колір</label>
-                  <input type="text" id="color" name="color" placeholder="Колір" required>
-                  <br>
-                  <br>
+          <h2> Тварина </h2>
+          <br>
 
-                  <label for="lname">Дата народження</label>
-                  <input required type="date" id="date" name="b_date" placeholder="Дата народження" style="  width: 100%; 
+          <label for="fname">Кличка</label>
+          <input type="text" id="a_name" name="a_name" placeholder="Кличка" required>
+
+          <label for="lname">Вид</label>
+          <input type="text" id="a_breed" name="a_breed" placeholder="Вид" required>
+
+          <label for="lname">Тип</label>
+          <input type="text" id="a_type" name="a_type" placeholder="Тип" required>
+
+          <label for="lname">Стать</label>
+          <select id="country" name="gender">
+            <option value="M">M</option>
+            <option value="F">F</option>
+          </select>
+
+          <label for="lname">Вага</label>
+          <input type="text" id="weight" onkeypress='validate(event)' name="weight" placeholder="Вага" required>
+
+          <label for="lname">Колір</label>
+          <input type="text" id="color" name="color" placeholder="Колір" required>
+          <br>
+          <br>
+
+          <label for="lname">Дата народження</label>
+          <input required type="date" id="date" name="b_date" placeholder="Дата народження" style="  width: 100%; 
                   padding: 12px; 
                   border: 1px solid #ccc;
                   border-radius: 4px; 
@@ -96,67 +98,67 @@ function yesChange(){
                   margin-top: 6px; 
                   margin-bottom: 16px; 
                   resize: vertical;">
-                  
-                  <br>
-                  <br>
 
-                  <label for="lname">ІНН Власника</label>
-                  <input type="text" id="lastinn" name="innowner" placeholder="ІНН Власника" required>
-                  
-                  <br>
-
-                  <input type="submit" value="Додати" id="regis-btn">
-              
-                </form>
-              </div>
-        </legend>
-  
-    </section>
-
-    <footer>
-      <div class="w-80">
-        <div class="footer-box">
-          <h2> Послуги </h2>
           <br>
-          <a href="">Щеплення</a>
-          <a href="">Діагностика</a>
-          <a href="">Стаціонар</a>
-          <a href="">Ендоскопія</a>
-          <a href="">Грумінг</a>
-        </div>
-
-        <div class="footer-box">
-          <h2>Локації</h2>
           <br>
-          <a href="">Англія</a>
-          <a href="">Італія</a>
-          <a href="">Україна</a>
-          <a href="">Польща</a>
-          <a href="">Литва</a>
-        </div>
 
-        <div class="footer-box">
-          <h2> Компанія </h2>
-          <br>
-          <a href="">Історія</a>
-          <a href="">Філіали</a>
-          <a href="">Про нас</a>
-          <a href="">Притулок</a>
-           <a href="">Контакти</a>
-        </div>
+          <label for="lname">ІНН Власника</label>
+          <input type="text" id="lastinn" name="innowner" placeholder="ІНН Власника" required>
 
-        <div class="footer-box">
-          <h2> Лікування </h2>
           <br>
-          <a href="">Терапія</a>
-          <a href="">Хірургія</a>
-          <a href="">Травматологія</a>
-          <a href="">Анестезіологія</a>
-           <a href="">Стоматологія</a>
-        </div>
+
+          <input type="submit" value="Додати" id="regis-btn">
+
+        </form>
       </div>
-    </footer>
-    <script src="/js/test.js"></script>
-</body>
-</html>
+    </legend>
 
+  </section>
+
+  <footer>
+    <div class="w-80">
+      <div class="footer-box">
+        <h2> Послуги </h2>
+        <br>
+        <a href="">Щеплення</a>
+        <a href="">Діагностика</a>
+        <a href="">Стаціонар</a>
+        <a href="">Ендоскопія</a>
+        <a href="">Грумінг</a>
+      </div>
+
+      <div class="footer-box">
+        <h2>Локації</h2>
+        <br>
+        <a href="">Англія</a>
+        <a href="">Італія</a>
+        <a href="">Україна</a>
+        <a href="">Польща</a>
+        <a href="">Литва</a>
+      </div>
+
+      <div class="footer-box">
+        <h2> Компанія </h2>
+        <br>
+        <a href="">Історія</a>
+        <a href="">Філіали</a>
+        <a href="">Про нас</a>
+        <a href="">Притулок</a>
+        <a href="">Контакти</a>
+      </div>
+
+      <div class="footer-box">
+        <h2> Лікування </h2>
+        <br>
+        <a href="">Терапія</a>
+        <a href="">Хірургія</a>
+        <a href="">Травматологія</a>
+        <a href="">Анестезіологія</a>
+        <a href="">Стоматологія</a>
+      </div>
+    </div>
+  </footer>
+  <script src="/js/test.js"></script>
+</body>
+
+</html>

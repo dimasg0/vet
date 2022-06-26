@@ -1,12 +1,12 @@
 input[type=text], select, textarea {
-  width: 100%; /* Полная ширина */
-  padding: 12px; /* Немного отступов */ 
-  border: 1px solid #ccc; /* Серая граница */
-  border-radius: 4px; /* Округленные границы */
-  box-sizing: border-box; /* Убедитесь, что прокладка и ширина остаются на месте */
-  margin-top: 6px; /* Добавить верхнее поле */
-  margin-bottom: 16px; /* Нижнее поле */
-  resize: vertical /* Разрешить пользователю изменять размер текстовой области по вертикали (не по горизонтали) */
+  width: 100%; 
+  padding: 12px;
+  border: 1px solid #ccc; 
+  border-radius: 4px; 
+  box-sizing: border-box; 
+  margin-top: 6px; 
+  margin-bottom: 16px; 
+  resize: vertical;
 }
 
 input[type=date]{
@@ -19,7 +19,7 @@ input[type=date]{
   margin-bottom: 16px; 
   resize: vertical;
 }
-/* Стиль кнопки Отправить с определенным цветом фона и т. д */
+
 input[type=submit] {
   background-color: #4CAF50;
   color: white;
@@ -29,12 +29,10 @@ input[type=submit] {
   cursor: pointer;
 }
 
-/* При наведении курсора мыши на кнопку Отправить добавьте более темный зеленый цвет */
 input[type=submit]:hover {
   background-color: #45a049;
 }
 
-/* Добавить цвет фона и некоторые отступы вокруг формы */
 .container {
   border-radius: 5px;
   background-color: #f2f2f2;

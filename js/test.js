@@ -53,7 +53,6 @@ function loginToSystem() {
     }
 
     else if((document.querySelector('#login').value != "administrator") && (document.querySelector('#password-login').value != "administrator")){
-        //todo database 
         document.location.href = "/html/home.html";
     }
     else { 

@@ -13,7 +13,6 @@ if($conn->connect_error){
 $a = date('d.m.Y H:i:s');
 $timestamp = strtotime($a);
 
-
 $sql = "INSERT INTO `diagnostic`(`diagnosticID`, `title`, `date_start`, `id_animal`, `id_doctor`, `cost`) VALUES
  ('$timestamp','$title','$date_st','$id_animal', 1, '$cost')";
 
